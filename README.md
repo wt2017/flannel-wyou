@@ -1,3 +1,9 @@
+## Binary Compile Command
+cd flannel-wyou; CGO_ENABLED=1 make dist/flanneld
+
+## Container Image Build Command
+sudo podman build --platform linux/amd64 --build-arg BUILDPLATFORM=linux/amd64 --build-arg TARGETPLATFORM=linux/amd64 --build-arg TAG=v0.56.1 -t flannel-wyou:v0.56.1 -f Dockerfile
+
 # flannel
 
 ![flannel Logo](logos/flannel-horizontal-color.png)
